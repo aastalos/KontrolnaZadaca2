@@ -3,9 +3,17 @@
 		<v-row>
 			<v-col cols="12">
 				<v-card class="pa-3" outlined width="600px">
-					<v-card-title></v-card-title>
+					<v-card-title>Dodaj studenta</v-card-title>
 					<v-card-text>
-						<v-form></v-form>
+						<v-form>
+							<v-text-filed label="Ime"></v-text-filed>
+							<v-text-filed label="Prezime" ></v-text-filed>
+							<v-text-filed label="Broj dolazaka (maximalno 15)" ></v-text-filed>
+							<v-text-filed label="Rezultat prvog kol (40)" ></v-text-filed>
+							<v-text-filed label="Rezultat drugog kol (40)" ></v-text-filed>
+							<v-text-filed label="Kontinuirano pracenje (20)" ></v-text-filed>
+
+						</v-form>
 					</v-card-text>
 					<v-card-actions>
 						<v-btn
@@ -15,6 +23,8 @@
 							@click="obrisiSveUnesenePodatke">
 							BRISI PODATKE
 						</v-btn>
+						<v-btn style="position: static; right: auto; color: aqua; border: 5px green; ">Obriši sve</v-btn>
+						<v-btn ></v-btn>
 						<v-spacer></v-spacer>
 					</v-card-actions>
 				</v-card>
@@ -35,6 +45,7 @@ export default {
 		dodajStudenta() {
 			let noviStudent = {
 				//Dodaj propertyje
+				
 			};
 			//ovo ne diraj
 			let studenti = JSON.parse(localStorage.getItem("studenti"));
